@@ -84,7 +84,7 @@ class _MenuViewState extends State<MenuView> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        if (animationController.isCompleted) {
+        if (!animationController.isDismissed) {
           animationController.reverse();
         } else {
           return true;
