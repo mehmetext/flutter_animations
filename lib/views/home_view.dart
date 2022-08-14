@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_animations/views/animation_controller_ticker_view.dart';
+import 'package:simple_animations/views/changable_val_view.dart';
 import 'package:simple_animations/views/menu_view.dart';
 
 import 'curved_animation_view.dart';
@@ -80,6 +81,17 @@ class _HomeViewState extends State<HomeView> {
               },
               child: Text("Custom Menu"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChangableValView(),
+                  ),
+                );
+              },
+              child: Text("Changable Value"),
+            )
           ],
         ),
       ),
