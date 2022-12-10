@@ -119,14 +119,7 @@ class _StaggeredAnimationsViewState extends State<StaggeredAnimationsView>
               alignment: sequenceAnimation["alignment"].value,
               child: Transform.scale(
                 scale: heartSizeAnimation.value,
-                child: Icon(
-                  (sequenceAnimationController.status !=
-                          AnimationStatus.dismissed)
-                      ? Icons.favorite
-                      : Icons.heart_broken,
-                  size: sequenceAnimation["size"].value,
-                  color: sequenceAnimation["color"].value,
-                ),
+                child: _iconWidget,
               ),
             ),
           ),
@@ -138,4 +131,25 @@ class _StaggeredAnimationsViewState extends State<StaggeredAnimationsView>
       ),
     );
   }
+
+  Widget get _iconWidget => Stack(
+        alignment: Alignment.center,
+        children: [
+          Icon(
+            (sequenceAnimationController.status != AnimationStatus.dismissed)
+                ? Icons.favorite
+                : Icons.heart_broken,
+            size: sequenceAnimation["size"].value,
+            color: sequenceAnimation["color"].value,
+          ),
+          Text(
+            "Bi Kodist",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: sequenceAnimationController.value * 30,
+            ),
+          ),
+        ],
+      );
 }
