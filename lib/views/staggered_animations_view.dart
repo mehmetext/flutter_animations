@@ -143,7 +143,7 @@ class _StaggeredAnimationsViewState extends State<StaggeredAnimationsView>
             color: sequenceAnimation["color"].value,
           ),
           Text(
-            "Bi Kodist",
+            "Mehmet",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
