@@ -55,7 +55,7 @@ class _CurvedAnimationViewState extends State<CurvedAnimationView>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animation - Tween"),
+        title: Text("Animation - Curved"),
       ),
       body: AnimatedBuilder(
         animation: animationController,
